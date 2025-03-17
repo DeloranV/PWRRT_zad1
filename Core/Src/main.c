@@ -59,10 +59,10 @@ static void MX_TIM6_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {	// PRZERWANIE OD TIMERA
  	if (htim == &htim6) {
- 		HAL_GPIO_TogglePin(DIODE_GPIO_Port, DIODE_Pin);
- 		HAL_IWDG_Refresh(&hiwdg);
+ 		HAL_GPIO_TogglePin(DIODE_GPIO_Port, DIODE_Pin);	// ZMIENIAMY STAN NA PORCIE
+ 		HAL_IWDG_Refresh(&hiwdg);	// ODŚWIEŻAMY WATCHDOGA
  	}
  }
 /* USER CODE END 0 */
@@ -99,7 +99,7 @@ int main(void)
   MX_IWDG_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim6);
+  HAL_TIM_Base_Start_IT(&htim6);	// URUCHAMIAMY LICZNIK TIM6
   /* USER CODE END 2 */
 
   /* Infinite loop */
