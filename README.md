@@ -3,7 +3,11 @@
 Plik "main.c" z kodem znajduje się w "Core/Src/main.c" <br>
 Poniżej znajdują się zrzuty ekranu z konfiguracji/programu
 
-### Wewnętrzne źródło taktowania 16 MHz
+### Zewnętrzne źródło taktowania 16 MHz
+![image](https://github.com/user-attachments/assets/6a01e641-aff6-4208-8e57-a35f2ad0eff5)
+<br>
+![image](https://github.com/user-attachments/assets/9f64ec7e-39c8-4450-b56a-512e6c5f88e9)
+
 
 ### Port PA5 skonfigurowany jako GPIO Output
 
