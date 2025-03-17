@@ -62,6 +62,7 @@ static void MX_TIM6_Init(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
  	if (htim == &htim6) {
  		HAL_GPIO_TogglePin(DIODE_GPIO_Port, DIODE_Pin);
+ 		HAL_IWDG_Refresh(&hiwdg);
  	}
  }
 /* USER CODE END 0 */
@@ -165,7 +166,7 @@ static void MX_IWDG_Init(void)
 
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_32;
   hiwdg.Init.Reload = 4095;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
