@@ -1,6 +1,6 @@
 # PWR Racing Team Dział Software
 ## Zadanie rekrutacyjne nr.1
-Plik "main.c" z kodem znajduje się w "Core/Src/main.c"
+Plik "main.c" z kodem znajduje się w "Core/Src/main.c" <br>
 Poniżej znajdują się zrzuty ekranu z konfiguracji/programu
 
 ### Wewnętrzne źródło taktowania 16 MHz
